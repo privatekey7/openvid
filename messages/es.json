@@ -4,9 +4,6 @@
     "github": "GitHub",
     "editor": "Ir al editor",
     "donate": "Donar",
-    "login": "Iniciar sesión",
-    "logout": "Cerrar sesión",
-    "loggingOut": "Cerrando sesión...",
     "menu": "Menú",
     "screen": "Grabar",
     "close": "Cerrar"
@@ -264,23 +261,6 @@
       }
     }
   },
-  "login": {
-    "title": "Iniciar sesión",
-    "subtitle": "Elige tu método preferido para continuar",
-    "backToHome": "Volver al inicio",
-    "disclaimer": "Al continuar, aceptas nuestros <terms>Términos de Servicio</terms> y <privacy>Política de Privacidad</privacy>.",
-    "providers": {
-      "groupLabel": "Opciones de inicio de sesión",
-      "google": "Continuar con Google",
-      "github": "Continuar con GitHub",
-      "twitch": "Continuar con Twitch",
-      "loading": "Conectando..."
-    },
-    "errors": {
-      "generic": "Error al iniciar sesión. Por favor, intenta de nuevo.",
-      "signIn": "Error signing in with {provider}"
-    }
-  },
   "placeholder": {
     "browserBar": {
       "newTab": "Nueva pestaña",
@@ -303,16 +283,6 @@
     "title": "Página no encontrada",
     "description": "La ruta que buscas no existe en nuestro editor.",
     "backHome": "Volver al Inicio"
-  },
-  "userMenu": {
-    "login": "Iniciar sesión",
-    "connectedWith": "Conectado con {provider}",
-    "home": "Inicio",
-    "editor": "Editor",
-    "logout": "Cerrar sesión",
-    "loggingOut": "Cerrando sesión...",
-    "ariaLabel": "Menú de usuario",
-    "defaultUser": "Usuario"
   },
   "donation": {
     "title": "Cómprame un café",
@@ -751,16 +721,6 @@
         "noUndo": "No hay acciones para deshacer",
         "redo": "Rehacer (Ctrl+Y)",
         "noRedo": "No hay acciones para rehacer"
-      },
-      "auth": {
-        "defaultUser": "Usuario",
-        "signIn": "Iniciar sesión",
-        "userMenu": "Menú de usuario",
-        "connectedWith": "Conectado con {provider}",
-        "home": "Inicio",
-        "editor": "Editor",
-        "signOut": "Cerrar sesión",
-        "signingOut": "Cerrando sesión..."
       }
     },
     "export": {

@@ -4,9 +4,6 @@
     "github": "GitHub",
     "editor": "Go to editor",
     "donate": "Donate",
-    "login": "Sign in",
-    "logout": "Sign out",
-    "loggingOut": "Signing out...",
     "menu": "Menu",
     "screen": "Record",
     "close": "Close"
@@ -268,23 +265,6 @@
       }
     }
   },
-  "login": {
-    "title": "Sign in",
-    "subtitle": "Choose your preferred method to continue",
-    "backToHome": "Back to home",
-    "disclaimer": "By continuing, you accept our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
-    "providers": {
-      "google": "Continue with Google",
-      "github": "Continue with GitHub",
-      "twitch": "Continue with Twitch",
-      "groupLabel": "Sign in options",
-      "loading": "Connecting..."
-    },
-    "errors": {
-      "generic": "Error signing in. Please try again.",
-      "signIn": "Error signing in with {provider}"
-    }
-  },
   "placeholder": {
     "browserBar": {
       "newTab": "New tab",
@@ -307,16 +287,6 @@
     "title": "Page not found",
     "description": "The route you are looking for does not exist in our editor.",
     "backHome": "Back to Home"
-  },
-  "userMenu": {
-    "login": "Sign in",
-    "connectedWith": "Connected with {provider}",
-    "home": "Home",
-    "editor": "Editor",
-    "logout": "Sign out",
-    "loggingOut": "Signing out...",
-    "ariaLabel": "User menu",
-    "defaultUser": "User"
   },
   "donation": {
     "title": "Buy me a coffee",
@@ -797,16 +767,6 @@
         "noUndo": "No actions to undo",
         "redo": "Redo (Ctrl+Y)",
         "noRedo": "No actions to redo"
-      },
-      "auth": {
-        "defaultUser": "User",
-        "signIn": "Sign In",
-        "userMenu": "User Menu",
-        "connectedWith": "Connected with {provider}",
-        "home": "Home",
-        "editor": "Editor",
-        "signOut": "Sign Out",
-        "signingOut": "Signing out..."
       }
     },
     "export": {
