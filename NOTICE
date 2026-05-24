@@ -1,0 +1,34 @@
+OpenVid
+=======
+
+This project is a derivative work based on OpenVid.
+
+Original work
+-------------
+  Copyright (c) Cristian Olivera (https://github.com/CristianOlivera1)
+  Source:       https://github.com/CristianOlivera1/openvid
+  Website:      https://openvid.dev
+
+  All credit for the original design, architecture, and core features
+  of OpenVid belongs to Cristian Olivera and the original project
+  contributors. See https://github.com/CristianOlivera1/openvid/graphs/contributors
+
+Modifications in this fork
+--------------------------
+  Copyright (c) 2026 @privatekey7 (https://github.com/privatekey7)
+
+  Changes from the original work:
+    - Added Russian localization (messages/ru.json)
+    - Moved third-party provider API keys (Unsplash, Pexels, Pixabay)
+      server-side to prevent leakage into the client bundle
+    - Removed Supabase authentication and cloud-storage integration
+      to enable fully local, self-hosted usage
+    - Updated dependencies to address known vulnerabilities
+
+License
+-------
+  Both the original work and the modifications are licensed under
+  the PolyForm Noncommercial License 1.0.0.
+
+  See LICENSE.md for the full license text, or visit:
+  https://polyformproject.org/licenses/noncommercial/1.0.0

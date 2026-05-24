@@ -1,3 +1,23 @@
+<div align="right">
+  <a href="./README.ru.md">🇷🇺 Читать на русском</a>
+</div>
+
+> ## About this fork
+>
+> This is a **community-maintained Russian fork** of [openvid by @CristianOlivera1](https://github.com/CristianOlivera1/openvid).
+>
+> **All credit for OpenVid goes to its original author, [Cristian Olivera](https://github.com/CristianOlivera1).** The design, architecture, and core features are entirely his work. If you want the official version with all features (cloud sync, auth, etc.) — please use the [original repository](https://github.com/CristianOlivera1/openvid) and the [openvid.dev](https://openvid.dev) demo.
+>
+> ### What's different in this fork
+> - Russian localization added (`messages/ru.json`)
+> - Provider API keys moved server-side (`UNSPLASH_ACCESS_KEY` instead of `NEXT_PUBLIC_*`) so they no longer leak into the client bundle
+> - Supabase integration removed for fully local self-hosted use (no auth, no cloud storage)
+> - Dependencies updated to address known vulnerabilities
+>
+> Maintained by [@privatekey7](https://github.com/privatekey7). See [`AUTHORS.md`](./AUTHORS.md) and [`NOTICE`](./NOTICE) for full attribution.
+>
+> ---
+
 <div align="center">
   <img width="50%" alt="openvid Hero" src="https://openvid.dev/images/pages/openvid.svg" />
 
@@ -5,7 +25,6 @@
 
   [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-  [![Supabase](https://img.shields.io/badge/Supabase-Auth-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
 
   [![oosmetrics](https://api.oosmetrics.com/api/v1/badge/achievement/0035870f-b4f4-4b12-9a1c-bef97b6785af.svg)](https://oosmetrics.com/repo/CristianOlivera1/openvid)
 
@@ -108,22 +127,6 @@ Add context to your demo with professional frames:
 
 ---
 
-## Authentication
-
-Powered by **Supabase Auth** with OAuth support:
-
-<div align="center">
-
-| Provider | Status |
-|:--------:|:------:|
-| Google   | ✅ Supported |
-| GitHub   | ✅ Supported |
-| Twitch   | ✅ Supported |
-
-</div>
-
----
-
 ## Technology
 
 **Video Processing**
@@ -136,7 +139,6 @@ Powered by **Supabase Auth** with OAuth support:
 **Storage**
 - IndexedDB - locally recorded videos
 - LocalStorage - user settings
-- Supabase Storage - cloud backups (coming soon)
 
 **UI/UX**
 - Radix UI - accessible components
@@ -150,9 +152,8 @@ Powered by **Supabase Auth** with OAuth support:
 # Install dependencies
 pnpm install
 
-# Setup environment
+# Setup environment (optional - only needed for media provider integrations)
 cp .env.example .env
-# Add your Supabase credentials
 
 # Start development server
 pnpm dev
