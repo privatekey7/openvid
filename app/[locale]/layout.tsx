@@ -26,14 +26,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     languages[loc] = `${baseUrl}/${loc}`;
   });
 
+  const ogLocaleMap: Record<string, string> = {
+    es: 'es_ES',
+    en: 'en_US',
+    ru: 'ru_RU',
+  };
+  const ogLocale = ogLocaleMap[locale] ?? 'en_US';
+  const alternateLocale = Object.values(ogLocaleMap).filter((l) => l !== ogLocale);
+
   return {
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages,
     },
     openGraph: {
-      locale: locale === 'es' ? 'es_ES' : 'en_US',
-      alternateLocale: locale === 'es' ? ['en_US'] : ['es_ES'],
+      locale: ogLocale,
+      alternateLocale,
     },
   };
 }
@@ -56,7 +64,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <body className={`
         ${inter.variable} ${roboto.variable} ${poppins.variable} 
         ${montserrat.variable} ${dmSans.variable} ${inter.className} 

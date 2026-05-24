@@ -12,7 +12,24 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Third-party WASM/JS bundles shipped as static assets (FFmpeg core, etc.)
+    "public/**",
   ]),
+  {
+    rules: {
+      // Allow intentionally unused names if they start with "_"
+      // (useful for the unused half of a useState pair, etc.)
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;

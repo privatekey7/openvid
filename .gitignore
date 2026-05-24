@@ -41,7 +41,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-supabase-setup.sql
-
-BACKEND_SPEC.md
-BACKEND_TESTING.md
+# devin agent workspace
+.devin/

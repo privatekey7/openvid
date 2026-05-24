@@ -32,7 +32,7 @@ export function PhotoEditorPlaceholder({
     onToggle3DBackground,
     imageMaskConfig,
     onImageMaskConfigChange,
-    imageTransform,
+    imageTransform: _imageTransform,
     onReset,
 }: PhotoEditorPlaceholderProps) {
     const previewImageUrl = staticImageUrl ?? canvasImageUrl;

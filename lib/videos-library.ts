@@ -274,7 +274,6 @@ export async function getAllLibraryVideos(): Promise<LibraryVideo[]> {
 
 export async function getLibraryVideoInfoList(): Promise<LibraryVideoInfo[]> {
     const videos = await getAllLibraryVideos();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     return videos.map(({ blob: _blob, ...info }) => info);
 }
 

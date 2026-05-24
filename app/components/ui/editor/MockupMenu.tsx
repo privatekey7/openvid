@@ -28,7 +28,7 @@ export function MockupMenu({
 }: MockupMenuProps) {
   const t = useTranslations("mockupMenu");
   const [selectedCategory, setSelectedCategory] = useState<MockupCategory>("all");
-  const [popoverOpen, setPopoverOpen] = useState(false);
+  const [_popoverOpen, setPopoverOpen] = useState(false);
   const [gridLoaded, setGridLoaded] = useState(false);
 
   const filteredMockups = selectedCategory === "all" ? MOCKUPS : MOCKUPS.filter(m => m.category === selectedCategory);

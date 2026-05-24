@@ -21,7 +21,7 @@ export function ElementsMenu({
     onAddElement,
     selectedElement,
     onUpdateElement,
-    onDeleteElement,
+    onDeleteElement: _onDeleteElement,
     textTabTrigger = 0,
 }: ExtendedElementsMenuProps) {
     const t = useTranslations("elementsMenu");

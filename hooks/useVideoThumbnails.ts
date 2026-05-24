@@ -285,6 +285,7 @@ export function useVideoThumbnails(
     // Generate thumbnails when video URL or videoId changes
     useEffect(() => {
         if (videoUrl && duration > 0) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect -- resetting thumbnail caches before async generation
             setLowQualityThumbnails([]);
             setHighQualityThumbnails([]);
             setProgress(0);

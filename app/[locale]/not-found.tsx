@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { AuthProvider } from "@/hooks/useAuth";
 import { Link } from "@/navigation";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
@@ -11,7 +10,7 @@ export default function NotFound() {
   const t = useTranslations('notFound');
   
   return (
-    <AuthProvider>
+    <>
       <Header />
 
       <div className="flex flex-col items-center justify-center min-h-dvh bg-[#050505] text-center px-6 relative overflow-hidden">
@@ -22,7 +21,7 @@ export default function NotFound() {
 
         <div className="-mt-8 space-y-3 animate-reveal opacity-0 [animation-delay:300ms] relative z-10">
           <div className="flex justify-center mb-4 opacity-50">
-            <Image src="/svg/openvid.svg" alt="Openvid" width={120} height={30} />
+            <Image src="/svg/openvid.svg" alt="Openvid" width={120} height={30} style={{ height: "auto" }} />
           </div>
 
           <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight">
@@ -44,6 +43,6 @@ export default function NotFound() {
 
       </div>
       <Footer/>
-    </AuthProvider>
+    </>
   );
 }

@@ -11,6 +11,7 @@ export function TrackVolumeSlider({ track, onUpdateAudioTrack }: {
     useEffect(() => {
         const externalValue = track.volume * 100;
         if (Math.abs(internalVolume - externalValue) > 1) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing controlled prop into local slider state
             setInternalVolume(externalValue);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps

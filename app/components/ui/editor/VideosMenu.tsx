@@ -56,6 +56,7 @@ export function VideosMenu({
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- async load on mount; setState happens inside loadVideos
     loadVideos();
   }, [loadVideos, refreshTrigger]);
 

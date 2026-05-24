@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 type WebApplicationSchema = {
   '@context': 'https://schema.org';
   '@type': 'WebApplication';
@@ -53,16 +51,15 @@ type StructuredDataProps = {
 
 export function StructuredData({ data }: StructuredDataProps) {
   return (
-    <Script
+    <script
       id={`structured-data-${data['@type']}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      strategy="beforeInteractive"
     />
   );
 }
 
-export function generateWebAppSchema(locale: 'es' | 'en'): WebApplicationSchema {
+export function generateWebAppSchema(locale: 'es' | 'en' | 'ru'): WebApplicationSchema {
   const baseUrl = 'https://openvid.dev';
   
   const content = {
@@ -90,9 +87,21 @@ export function generateWebAppSchema(locale: 'es' | 'en'): WebApplicationSchema 
         'Free online editor',
       ],
     },
+    ru: {
+      name: 'openvid — Онлайн-видеоредактор',
+      description: 'Бесплатный онлайн-видеоредактор с ИИ. Запись экрана, кинематографические зумы, профессиональные мокапы и экспорт в HD без водяных знаков.',
+      features: [
+        'Запись экрана в HD',
+        'Кинематографические зумы с ИИ',
+        'Профессиональные мокапы',
+        'Без водяных знаков',
+        'Экспорт в высоком качестве',
+        'Бесплатный онлайн-редактор',
+      ],
+    },
   };
 
-  const { name, description, features } = content[locale];
+  const { name, description, features } = content[locale] ?? content.en;
 
   return {
     '@context': 'https://schema.org',
