@@ -171,3 +171,8 @@ Open [http://localhost:3000](http://localhost:3000)
 <a href="https://github.com/CristianOlivera1/openvid/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=CristianOlivera1/openvid" />
 </a>
+
+## Автор
+
+Канал в Telegram: [@privatekey_ai](https://t.me/privatekey_ai) — Claude Code, ИИ-агенты и новые нейросети на практике.
+Вопросы и предложения — в [чате канала](https://t.me/privatekey_ai_chat).
